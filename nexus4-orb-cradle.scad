@@ -17,10 +17,10 @@ orb_face_angle = 34; // degrees
 orb_face_r = 75 / 2; // mm
 
 // Extra space between the holder and the orb, to allow for poor tolerances
-orb_tolerance = 0; // mm
+orb_tolerance = 1; // mm
 
 // Radius of the orb's base
-orb_base_r = 38 / 2; // mm
+orb_base_r = 39 / 2; // mm
 
 // Offset between the orb's USB socket and the base
 socket_height = 9; // mm
