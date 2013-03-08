@@ -47,6 +47,7 @@ $fs = 0.5;
 
 orb_r = orb_face_r + orb_tolerance;
 orb_h = sqrt(pow(orb_face_r, 2) - pow(orb_base_r, 2));
+cradle_r = orb_r + thickness;
 
 module orb_clipping() {
 	intersection() {
@@ -97,7 +98,6 @@ module phone_face(stacked=1) {
 
 module cradle() {
 	cradle_width = 0.75 * phone_x;
-	cradle_r = orb_r + thickness;
 	ring_r = sqrt(pow(cradle_r, 2) - pow(orb_h-thickness, 2));
 	front_length = (phone_y/2 - phone_orb_offset) * cos(orb_face_angle)
 		+ phone_z * sin(orb_face_angle)	+ thickness;
@@ -140,7 +140,19 @@ module cradle() {
 	}
 }
 
+module shim(h=30) {
+	cylinder(h=h, r=8);
+}
+
+module shims() {
+	translate([-cradle_r, -cradle_r, 0]) shim(15);
+	translate([cradle_r, -cradle_r, 0]) shim(15);
+	translate([-cradle_r, cradle_r, 0]) shim(30);
+	translate([cradle_r, cradle_r, 0]) shim(30);
+}
+
 //orb();
 //plug();
 //phone();
 cradle();
+shims();
