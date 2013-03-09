@@ -33,3 +33,12 @@ Printing
 Compile the design in OpenSCAD (press F6) and then select "Export as
 STL..." under the Design menu.  Provide the resulting STL file as input to
 your printer's slicer / g-code generator.
+
+
+License
+-------
+
+This code is provided under the Creative Commons Attribution-ShareAlike 3.0
+license:
+
+http://creativecommons.org/licenses/by-sa/3.0/
