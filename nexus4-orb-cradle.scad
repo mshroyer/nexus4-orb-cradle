@@ -140,19 +140,19 @@ module cradle() {
 	}
 }
 
-module shim(h=30) {
+module pillar(h=10) {
 	cylinder(h=h, r=8);
 }
 
-module shims() {
-	translate([-cradle_r, -cradle_r, 0]) shim(15);
-	translate([cradle_r, -cradle_r, 0]) shim(15);
-	translate([-cradle_r, cradle_r, 0]) shim(30);
-	translate([cradle_r, cradle_r, 0]) shim(30);
+module pillars() {
+	translate([-cradle_r, -cradle_r, 0]) pillar();
+	translate([cradle_r, -cradle_r, 0]) pillar();
+	translate([-cradle_r, cradle_r, 0]) pillar();
+	translate([cradle_r, cradle_r, 0]) pillar();
 }
 
 //orb();
 //plug();
 //phone();
 cradle();
-shims();
+//pillars();
