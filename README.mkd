@@ -1,0 +1,35 @@
+Nexus 4 Charging Orb Cradle
+===========================
+
+This is an [OpenSCAD](http://www.openscad.org/) design of a cradle for the
+Nexus 4's wireless Qi charging orb.  Its purpose is to prevent the phone
+from slowly sliding off the charger's face, which many people have reported
+trouble with.
+
+For photos and pre-generated STL files, see the project's Thingiverse page:
+
+[http://www.thingiverse.com/thing:59441](http://www.thingiverse.com/thing:59441)
+
+Mark Shroyer<br/>
+Sat Mar  9 00:42:45 EST 2013
+
+
+Customizing the cradle
+----------------------
+
+You can tweak the cradle's dimensions by editing the definitions in the
+"parameters" section of the source file.  Refer to the included
+parameters-diagram.jpg for a diagram of some of these measurements.
+
+If your 3D printer lacks a heated bed and has problems with the raft
+lifting up during the printing process, you may want to uncomment the
+`pillars();` line at the end of the file, which adds some extra material
+surrounding the cradle to try to prevent this.
+
+
+Printing
+--------
+
+Compile the design in OpenSCAD (press F6) and then select "Export as
+STL..." under the Design menu.  Provide the resulting STL file as input to
+your printer's slicer / g-code generator.
